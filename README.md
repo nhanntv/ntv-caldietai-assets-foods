@@ -3,7 +3,8 @@
 This repository hosts the CalDietAI full food database file, served via **jsDelivr CDN**.
 
 - **Branch:** `assets` — contains only the binary data file
-- **CDN:** `https://cdn.jsdelivr.net/gh/nhanntv/ntv-caldietai-assets-foods@v<N>/cal_diet_ai_foods_full.gz`
+- **URL:** `https://raw.githubusercontent.com/nhanntv/ntv-caldietai-assets-foods/v<N>/cal_diet_ai_foods_full.gz`
+- **CDN:** GitHub raw content served via Fastly CDN
 - **Version control:** Firebase Remote Config (`food_db.full_version` + `food_db.full_url`)
 
 > Tag name matches `full_version` in Remote Config — e.g. tag `v1` = `full_version: 1`.
@@ -60,7 +61,7 @@ git push origin v2
 Open in browser — should start downloading (allow a few minutes for jsDelivr to cache):
 
 ```
-https://cdn.jsdelivr.net/gh/nhanntv/ntv-caldietai-assets-foods@v2/cal_diet_ai_foods_full.gz
+https://raw.githubusercontent.com/nhanntv/ntv-caldietai-assets-foods/v2/cal_diet_ai_foods_full.gz
 ```
 
 **5. Update Firebase Remote Config**
@@ -71,7 +72,7 @@ Go to Firebase Console → Remote Config → edit key `app_remote_config`:
 {
   "food_db": {
     "full_version": 2,
-    "full_url": "https://cdn.jsdelivr.net/gh/nhanntv/ntv-caldietai-assets-foods@v2/cal_diet_ai_foods_full.gz"
+    "full_url": "https://raw.githubusercontent.com/nhanntv/ntv-caldietai-assets-foods/v2/cal_diet_ai_foods_full.gz"
   }
 }
 ```
